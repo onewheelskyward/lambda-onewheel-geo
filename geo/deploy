@@ -1,4 +1,5 @@
 #!/usr/local/bin/fish
+rm one.zip
 zip -r one.zip index.js node_modules package.json
 aws lambda update-function-code --region us-west-2 --profile aklambda --function-name geo --zip-file fileb://one.zip
 
